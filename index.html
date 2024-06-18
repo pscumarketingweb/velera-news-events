@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velera News & Events</title>
+    <!-- Custom Styles -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome 6 Pro -->
+    <script src="https://kit.fontawesome.com/824da20b23.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container-fluid hero py-5">
+        <div class="container py-5">
+            <div class="row py-5">
+                <h1 class="wt-h1 text-white">News & Events</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-6 d-flex justify-content-center align-items-center featured-image">
+                <div class="featured-image-container">
+                    <div class="text-overlay">
+                        <h3> Title of most recent featured article goes here</h3>
+                        <p class="date">June 18, 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 py-5 py-md-0">
+                <ul class="news-tabs nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item wt-subhead" role="presentation">
+                        <button class="nav-link active" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="true">News</button>
+                    </li>
+                    <li class="nav-item wt-subhead" role="presentation">
+                        <button class="nav-link" id="press-tab" data-bs-toggle="tab" data-bs-target="#press" type="button" role="tab" aria-controls="press" aria-selected="false">Press Releases</button>
+                    </li>
+                    <li class="nav-item wt-subhead" role="presentation">
+                        <button class="nav-link" id="search-tab" data-bs-toggle="tab" data-bs-target="#search" type="button" role="tab" aria-controls="search" aria-selected="false"><i class="fas fa-search"></i> Search</button>
+                    </li>
+                </ul>
+                <div class="tab-content-container">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane pt-3 fade show active" id="news" role="tabpanel" aria-labelledby="news-tab">
+                            <!-- Your content here -->
+                        </div>
+                        <div class="tab-pane pt-3 fade" id="press" role="tabpanel" aria-labelledby="press-tab">
+                            <!-- Your content here -->
+                        </div>
+                        <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
+                            <!-- Your content here -->
+                        </div>
+                    </div>
+                    <div id="fadeOverlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid events">
+        <div class="container py-5 ">
+            <div class="row">
+                <h2 class="wt-h2 text-center text-white">
+                    Events
+                </h2>
+            </div>
+            <div class="row py-5">
+                <div class="col-md-6 py-5 py-md-0" id="events-list">
+                    Events List
+                </div>
+                <div class="col-md-6 mt-4 mt-lg-0 d-flex justify-content-center align-items-center">
+                    <img src="img/image-placeholder.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    <!-- Script for loading the content into the home page -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const loadTabContent = (tabId, url) => {
+        const tabContent = document.querySelector(tabId);
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                tabContent.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading tab content:', error);
+                tabContent.innerHTML = '<p>Error loading content.</p>';
+            });
+    };
+
+    // Pre-load the news content for the news tab
+    loadTabContent('#news', 'news.html');
+
+    // Event listeners for tab clicks
+    document.querySelectorAll('.nav-link').forEach(button => {
+        button.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-bs-target');
+            let url = '';
+
+            switch(tabId) {
+                case '#news':
+                    url = 'news.html';
+                    break;
+                case '#press':
+                    url = 'press-releases.html';
+                    break;
+                case '#search':
+                    url = 'search.html';
+                    break;
+                case '#events-list':
+                    url = 'events.html';
+                    break;
+            }
+            loadTabContent(tabId, url);
+        });
+    });
+    // Load the content for the events tab
+    loadTabContent('#events-list', 'events.html');
+});
+</script>
+
+<!-- Removing fade effect from scroll boxes -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabContent = document.querySelector('.tab-content');
+        const fadeOverlay = document.getElementById('fadeOverlay');
+
+        tabContent.addEventListener('scroll', function() {
+            const scrollTop = tabContent.scrollTop;
+            const scrollHeight = tabContent.scrollHeight;
+            const clientHeight = tabContent.clientHeight;
+
+            if (scrollTop + clientHeight >= scrollHeight) {
+                fadeOverlay.classList.add('hidden');
+            } else {
+                fadeOverlay.classList.remove('hidden');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

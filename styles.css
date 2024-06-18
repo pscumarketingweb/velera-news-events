@@ -1,0 +1,164 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+    background-image: url('img/hero-banner.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+.news-tabs .nav-link {
+    border: none !important;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.news-tabs .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: #2E6BF0;
+    transition: width 0.3s;
+}
+
+.news-tabs .nav-link:hover::after {
+    width: 0;
+}
+
+.news-tabs .nav-link.active::after {
+    width: 100%;
+}
+
+.news-tabs .nav-item {
+    margin-bottom: -1px;
+}
+
+ul.news-tabs li:first-child {
+    padding-left: 0;
+}
+
+ul.news-tabs li button {
+    padding: 6px 0;
+}
+
+ul.news-tabs li {
+    padding: 0 12px;
+}
+
+.wt-h1 {
+    font-family: 'Open Sans';
+    font-size: 3.375rem;
+    font-weight: 800;
+    line-height: 3.125rem;
+}
+
+.wt-h2 {
+    font-family: 'Open Sans';
+    font-size: 2.625rem;
+    font-weight: 800;
+    color: #013757;
+}
+
+.wt-subhead {
+    font-family: 'Open Sans';
+    font-size: 1.313rem;
+    font-weight: 400;
+    color: #2E6BF0;
+}
+
+.tab-content-container {
+    position: relative;
+    height: 450px;
+}
+
+.tab-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+#fadeOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#fadeOverlay.hidden {
+    opacity: 0;
+}
+
+.events {
+    background: radial-gradient(50% 50% at 50% 50%, #2E6BF0 0%, #1A3E8A 100%);
+}
+
+#events-list {
+    height: 520px;
+    overflow-x: scroll;
+}
+
+.featured-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.featured-image-container {
+    position: relative;
+    max-width: 100%;
+    width: 520px;
+    height: 520px;
+    background: url('img/image-placeholder.png') center center / cover no-repeat;
+    border-radius: 35px;
+}
+
+.featured-image-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 67%;
+    background: linear-gradient(to top, black, transparent);
+    border-radius: 0 0 35px 35px;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    padding: 10px;
+    color: white; 
+    z-index: 2;
+}
+
+.text-overlay h3 {
+    font-size: 1.313rem;
+    font-weight: 800;
+}
+
+@media all and (max-width: 576px) {
+    .wt-h1 {
+        font-size: 2.625rem;
+        line-height: 2.438rem;
+    }
+
+    .wt-h2 {
+        font-size: 2.125rem; 
+      }
+
+    .hero {
+        background-position: 69% 100% !important;
+    }
+}
+  

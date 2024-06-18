@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velera News & Events</title>
+    <!-- Custom Styles -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome 6 Pro -->
+    <script src="https://kit.fontawesome.com/824da20b23.js" crossorigin="anonymous"></script>
+
+    <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .search-bar-container {
+        display: flex;
+        align-items: center;
+        background-color: #efefef;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .search-input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 25px 0 0 25px;
+        padding-left:20px;
+    }
+
+    .search-button {
+        border: none;
+        background: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 0 25px 25px 0;
+    }
+
+    button.search-button {
+        background: #fff;
+        padding-right: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="search-bar-container">
+        <input type="text" class="search-input" placeholder="Search the archives">
+        <button class="search-button">
+            <i class="fas fa-search"></i> 
+        </button>
+    </div>
+</body>
+</html>
