@@ -53,14 +53,14 @@ ul.news-tabs li {
 
 .wt-h1 {
     font-family: 'Open Sans';
-    font-size: 3.375rem;
+    font-size: 2.125rem;
     font-weight: 800;
     line-height: 3.125rem;
 }
 
 .wt-h2 {
     font-family: 'Open Sans';
-    font-size: 2.625rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #013757;
 }
@@ -145,6 +145,32 @@ ul.news-tabs li {
 .text-overlay h3 {
     font-size: 1.313rem;
     font-weight: 800;
+}
+
+.hero-buttons .btn {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.event-btn-primary {
+    background-color: #EFE63F !important;
+    border-color: #EFE63F !important;
+    color: #013757 !important;
+}
+
+.event-btn-primary:hover, .event-btn-outline:hover {
+    background-color: #fff !important;
+    border-color: #fff !important;
+    color: #2e6bf0 !important;
+}
+
+.event-btn-outline {
+    color: #EFE63F !important;
+    border-color: #EFE63F !important;
 }
 
 @media all and (max-width: 576px) {
