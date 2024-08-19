@@ -34,6 +34,8 @@
             font-size: 1rem;
             font-weight: 800;
             color: #EFE63F;
+            display: flex;
+            align-items: center;
         }
 
         .events-title {
@@ -70,13 +72,17 @@
             font-size: 1.25rem;
         }
 
+        i.live, i.virtual {
+            font-size: 24px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="events-component">
             <div class="events-content">
-                <div class="events-date">Jun 25 - Jun 27</div>
+                <div class="events-date"><i class="fa-solid fa-users live"></i> Jun 25 - Jun 27</div>
                 <div class="events-title">Origence Lending Tech Live '24</div>
                 <div class="events-location">San Diego, CA</div>
             </div>
@@ -86,12 +92,12 @@
         </div>        
         <div class="events-component">
             <div class="events-content">
-                <div class="events-date">Jun 25 - Jun 27</div>
+                <div class="events-date"><i class="fa-solid fa-video virtual"></i>Jun 25 - Jun 27</div>
                 <div class="events-title">Origence Lending Tech Live '24</div>
-                <div class="events-location">San Diego, CA</div>
+                <div class="events-location">Virtual</div>
             </div>
             <div class="register-link">
-                <a href="#">Register Now</a><i class="fa-solid fa-chevron-right"></i>
+                <a href="#">Watch Now</a><i class="fa-solid fa-chevron-right"></i>
             </div>
         </div>
         <div class="events-component">

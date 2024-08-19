@@ -9,6 +9,12 @@
     background-size: cover;
 }
 
+.speakers-hero {
+    background-image: url('img/speakers-page-hero.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
 .news-tabs .nav-link {
     border: none !important;
     position: relative;
@@ -62,7 +68,16 @@ ul.news-tabs li {
     font-family: 'Open Sans';
     font-size: 2.2rem;
     font-weight: 800;
-    color: #013757;
+    color: #1A3E8A;
+}
+
+p {
+    color: #091757;
+    font-size: 1rem;
+}
+
+.featured-image-container p {
+    color: white;
 }
 
 .wt-subhead {
@@ -181,7 +196,7 @@ ul.news-tabs li {
 
     .wt-h2 {
         font-size: 2.125rem; 
-      }
+    }
 
     .hero {
         background-position: 69% 100% !important;

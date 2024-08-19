@@ -1,0 +1,35 @@
+.speaker-card {
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #FFF;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-grow: 1;
+    padding: 20px 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speaker-card h3 {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #2E6BF0;
+    font-weight: 800;
+}
+
+.speaker-card h4 {
+    color: #091757;
+    font-size: .9rem;
+    font-weight :600;
+}
+
+.speaker-card p {
+    text-align: center;
+    font-size: .8rem;
+}
+
+.speaker-card img {
+    max-width: 120px;
+    border-radius: 200px;
+}
